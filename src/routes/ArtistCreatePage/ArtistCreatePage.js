@@ -10,11 +10,11 @@ export default class ArtistCreatePage extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault();
     // const { artist } = this.context;
-    const { name, bio, tags } = ev.target;
+    const { name, bio, tag } = ev.target;
     const artist =  {
       name:name.value, 
       bio:bio.value, 
-      tags:tags.value
+      tag:tag.value
     };
     ArtistApiService.postArtist(artist)
       .then(this.context.postArtist)
@@ -42,8 +42,8 @@ export default class ArtistCreatePage extends Component {
           <textarea id='bio' name='bio' rows='10' required></textarea>
         </div>
         <div className='form-section'>
-          <label htmlFor='tags'>Tags (comma-separated)</label>
-          <input type='text' name='tags' id='tags' placeholder='' />
+          <label htmlFor='tag'>Tags (comma-separated)</label>
+          <input type='text' name='tag' id='tag' placeholder='' />
         </div>
         <div className='button-section'>
           <button type='submit'>Submit</button>
