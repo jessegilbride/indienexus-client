@@ -1,0 +1,19 @@
+@import url('https://pagecdn.io/lib/normalize/8.0.1/normalize.min.css');
+
+.App {
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.App__header {
+  height: var(--top-spacing);
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
+}
+
+.App__main {
+  height: calc(100vh - var(--top-spacing));
+  /* overflow: auto; */
+  /* padding-bottom: 40px; */
+}

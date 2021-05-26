@@ -1,0 +1,232 @@
+/* MOBILE STYLES */
+/* to do: convert floats to grid or flexbox */
+
+/* 
+"scroll-padding-top"
+Apply the "top-spacing" to anything that should show under the fixed element nav.
+https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
+*/
+
+html {
+  --top-spacing: 100px;
+  /* scroll-padding-top: var(--top-spacing); */
+}
+
+/* main {
+  margin-top: var(--top-spacing);
+} */
+
+nav {
+  /* --desktop-breakpoint: 48em; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* position: fixed; */
+  /* width: 100%; */
+  /* padding-top: 20px; */
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+/* nav > * {
+  flex: 1;
+} */
+
+nav h1 {
+  margin: 0;
+  font-size: initial;
+}
+
+nav a {
+  color: #000;
+}
+
+nav .logo {
+  display: block;
+  /* float: left; */
+  font-size: 2em;
+  /* padding: 0 20px; */
+  text-decoration: none;
+}
+
+/* menu */
+
+
+nav ul.menu {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding-left: 0;
+
+  min-height: 0;
+  transition: min-height 0.4s linear;
+  
+  list-style: none;
+  /* overflow: hidden; */
+  background-color: #fff;
+}
+
+nav li {
+  /* padding: 0 2em 2em 0; */
+  text-align: right;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+nav .create-profile-btn,
+form#navbar-search-form #artist-search {
+  height: 2.5em;
+  /* padding: 0.5em; */
+}
+
+nav .create-profile-btn {
+  display: inline-block;
+  position: relative;
+  border: 1px solid black;
+  background-color: darksalmon;
+  /* color: white; */
+}
+
+nav .create-profile-btn:hover {
+  background-color: indianred;
+}
+
+/* nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+nav > * {
+  display: inline-block;
+} */
+
+/* .navbar-search-label {
+  position: relative;
+  display: block;
+}
+.navbar-search-label:before {
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  right: 15px;
+  width: 20px;
+  content: '';
+  background-image: url(../public/images/search-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+} */
+
+form#navbar-search-form button[type='submit'] {
+  display: none;
+}
+form#navbar-search-form #artist-search {
+  position: relative;
+  width: 20em;
+  /* padding-right: 2em; */
+}
+
+/* menu icon */
+
+nav .menu-icon .menu-label-content,
+.search-label-content {
+  display: none;
+}
+
+nav .menu-icon {
+  cursor: pointer;
+  /* float: right; */
+  position: relative;
+  /* top: 28px; */
+  /* right: 34px; */
+  user-select: none;
+}
+
+nav .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s linear;
+  width: 40px;
+}
+
+nav .menu-icon .navicon:before,
+nav .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s linear;
+  width: 100%;
+}
+
+nav .menu-icon .navicon:before {
+  top: -10px;
+}
+
+nav .menu-icon .navicon:after {
+  top: 10px;
+}
+
+/* menu btn */
+
+nav .menu-btn {
+  display: none;
+}
+
+nav .menu-btn:checked ~ .menu {
+  min-height: 80vh;
+}
+
+nav .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+nav .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+nav .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* DESKTOP STYLES */
+/* 48em = 768px   */
+@media (min-width: 48em) {
+  /* nav {
+    padding-bottom: 20px;
+  }
+  nav li {
+    float: left;
+  }
+  nav li {
+    padding: 0 20px;
+  } */
+
+  nav ul.menu {
+    flex-direction: row;
+    padding: 0;
+    min-height: none;
+  }
+
+  nav .menu-icon {
+    display: none;
+  }
+}
