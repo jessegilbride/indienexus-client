@@ -23,7 +23,7 @@ nav {
   justify-content: space-between;
   /* position: fixed; */
   /* width: 100%; */
-  /* padding-top: 20px; */
+  padding: 10px 20px;
   background-color: #fff;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   z-index: 3;
@@ -77,10 +77,19 @@ nav li a {
   text-decoration: none;
 }
 
+nav li .view-all-artists-link {
+  border: 1px solid black;
+  padding: 0.25em 0.5em;
+}
+
 nav .create-profile-btn,
 form#navbar-search-form #artist-search {
   height: 2.5em;
   /* padding: 0.5em; */
+}
+
+.menu-item-conditionally-authenticated {
+  margin-left: 1em;
 }
 
 nav .create-profile-btn {
