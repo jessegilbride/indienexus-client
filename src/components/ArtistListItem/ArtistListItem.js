@@ -12,10 +12,10 @@ export default class ArtistListItem extends Component {
       <Link to={`/artist/${artist.id}`} className='ArtistListItem'>
         <header className='ArtistListItem__header'>
           <h2 className='ArtistListItem__heading'>{artist.name}</h2>
-          <ArtistDate artist={artist} />
         </header>
         <footer className='ArtistListItem__footer'>
-          <ArtistTags artist={artist} />
+          <div><ArtistTags artist={artist} /></div>
+          <div><ArtistDate artist={artist} /></div>
         </footer>
       </Link>
     );
