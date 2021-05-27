@@ -1,0 +1,11 @@
+a.ArtistListItem {
+  display: block;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  border: 1px solid lightgrey;
+}
+
+a.ArtistListItem:hover {
+  outline: 1px solid darkslategrey;
+}
