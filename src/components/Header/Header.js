@@ -45,17 +45,18 @@ export default class Header extends Component {
         </h1>
         
         <div className="menu-container">
-          <input className="menu-btn" type="checkbox" id="menu-btn" />
+          {/* NOTE: put this nav button back after static app demo is tested */}
+          {/* <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon" htmlFor="menu-btn">
             <span className="menu-label-content">Menu</span>
             <span className="navicon"></span>
-          </label>
+          </label> */}
           <ul className="menu">
             <li>
-              <Link to='/artist-list'> View All Artists </Link>
+              <Link to='/artist-list' className='view-all-artists-link'> View All Artists </Link>
             </li>
-            {hyphen}
-            <li>{TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}</li>
+            {/* {hyphen} */}
+            <li className='menu-item-conditionally-authenticated'>{TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}</li>
             {/* <li>
               <form id="navbar-search-form">
                 <label htmlFor="artist-search" className="navbar-search-label">

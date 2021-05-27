@@ -22,9 +22,9 @@ export default class LoginPage extends Component {
         <h2>Login</h2>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
 
-        <br />
+        {/* <br />
         <p>username: jwhitlock</p>
-        <p>password: swSf5Hti</p>
+        <p>password: swSf5Hti</p> */}
       </Section>
     )
   }
