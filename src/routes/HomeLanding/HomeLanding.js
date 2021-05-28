@@ -11,8 +11,7 @@ export default class HomeLanding extends Component {
   render() {
     return (
       <Fragment>
-        <h1>HOME</h1>
-        <p>(site description)</p>
+        <p>IndieNexus is the hub for independent music artists to showcase themselves, gain exposure, and connect with fans. Explore the various genres, or search for artists by name.</p>
         <div>
           {/* <TagList /> */}
         </div>
