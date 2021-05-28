@@ -45,12 +45,11 @@ export default class Header extends Component {
         </h1>
         
         <div className="menu-container">
-          {/* NOTE: put this nav button back after static app demo is tested */}
-          {/* <input className="menu-btn" type="checkbox" id="menu-btn" />
+          <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon" htmlFor="menu-btn">
             <span className="menu-label-content">Menu</span>
             <span className="navicon"></span>
-          </label> */}
+          </label>
           <ul className="menu">
             <li>
               <Link to='/artist-list' className='view-all-artists-link'> View All Artists </Link>

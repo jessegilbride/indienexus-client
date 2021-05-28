@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ArtistContext from '../../contexts/ArtistContext';
-// import ArtistApiService from '../../services/artist-api-service'; // commented out for static app demo; uncomment this for MVP demo
+import ArtistApiService from '../../services/artist-api-service';
 import { NiceDate, Section } from '../../components/Utils/Utils';
 import './ArtistPage.css';
 
@@ -15,9 +15,9 @@ export default class ArtistPage extends Component {
     const { artistId } = this.props.match.params;
     this.context.clearError();
 
-    /* ArtistApiService.getArtist(artistId) // commented out for static app demo; uncomment this block for MVP demo
+    ArtistApiService.getArtist(artistId)
       .then(this.context.setArtist)
-      .catch(this.context.setError); */
+      .catch(this.context.setError);
   }
 
   componentWillUnmount() {
@@ -26,15 +26,7 @@ export default class ArtistPage extends Component {
 
   // name, bio, soundcloud_embed, tag, date_created
   renderArtist() {
-    // const { artist } = this.context; // uncomment this for MVP demo
-    const artist = { // remove this for MVP demo
-      id: 1,
-      name: 'The Coffeeshop',
-      bio: '(This is where the bio would go.)',
-      soundcloud_embed: `<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1005504319&color=%23d0c0a0&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/soundcloud-scenes" title="Scenes: Indie" target="_blank" style="color: #cccccc; text-decoration: none;">Scenes: Indie</a> · <a href="https://soundcloud.com/soundcloud-scenes/sets/coffee-shop-mellow-indie-chill" title="Mellow Indie Chill: Coffee Shop" target="_blank" style="color: #cccccc; text-decoration: none;">Mellow Indie Chill: Coffee Shop</a></div>`,
-      tag: 'indie, rock, rap, spoken, folk',
-      date_created: '2021-03-21 00:00:00'
-    }
+    const { artist } = this.context;
     
     function SoundCloudEmbed() {
       return <div dangerouslySetInnerHTML={{__html: artist.soundcloud_embed}} className='soundcloud-embed' />;

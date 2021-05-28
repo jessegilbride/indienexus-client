@@ -11,9 +11,9 @@ export default class LoginPage extends Component {
   }
 
   handleLoginSuccess = () => {
-    const { location, history } = this.props
-    const destination = (location.state || {}).from || '/'
-    history.push(destination)
+    const { location, history } = this.props;
+    const destination = (location.state || {}).from || '/';
+    history.push(destination);
   }
 
   render() {
@@ -22,9 +22,12 @@ export default class LoginPage extends Component {
         <h2>Login</h2>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
 
-        {/* <br />
-        <p>username: jwhitlock</p>
-        <p>password: swSf5Hti</p> */}
+        <p>sample login (from database seed):</p>
+        <p>
+          username: jwhitlock
+          <br />
+          password: swSf5Hti
+        </p>
       </Section>
     )
   }
