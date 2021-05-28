@@ -63,9 +63,8 @@ export default class ArtistPage extends Component {
         ) : (
           <p className='red'>There was an error</p>
         );
-    /* } else if (!artist.id) {
-      // content = <div className='loading' />;
-      content = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>; */
+    } else if (!artist.id) {
+      content = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
     } else {
       content = this.renderArtist();
     }
