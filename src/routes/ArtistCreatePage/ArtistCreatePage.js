@@ -29,7 +29,7 @@ export default class ArtistCreatePage extends Component {
       <Fragment>
         <section>
           <h2>Create Profile</h2>
-          <p>When creating your profile, remember to give the 'bio' a personal touch. Remember the reader(s); your fans and those who would hire you want to get a sense of your background and inspirations.</p>
+          <p>When creating your profile, remember to give the 'bio' a personal touch. Remember the reader; your fans and those who would hire you want to get a sense of your background and inspirations. And don't forget to proveide links to your social media, and contact information for getting hired.</p>
           <p>Adding tags is optional, but recommended. Tags are searchable and help people find artists who use them.</p>
           <p>Putting a SoundCloud playlist of your music is also optional, but it's a great way to let people dive right into getting know and hear your sound. If you don't know how to get the embed code, follow these steps:</p>
           <ol>
