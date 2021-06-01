@@ -38,7 +38,7 @@ const AuthApiService = {
           3. queue a call to the refresh endpoint based on the JWT's exp value
         */
         TokenService.saveAuthToken(res.authToken)
-        IdleService.regiserIdleTimerResets()
+        IdleService.registerIdleTimerResets()
         TokenService.queueCallbackBeforeExpiry(() => {
           AuthApiService.postRefreshToken()
         })
@@ -60,7 +60,7 @@ const AuthApiService = {
       .then(res => {
         /*
           similar logic to whenever a user logs in, the only differences are:
-          - we don't need to queue the idle timers again as the user is already logged in.
+          - we don't need to queue the idle timers again as the user is already logged in
           - we'll catch the error here as this refresh is happening behind the scenes
         */
         TokenService.saveAuthToken(res.authToken)
