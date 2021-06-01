@@ -1,76 +1,69 @@
 /* MOBILE STYLES */
 /* to do: convert floats to grid or flexbox */
 
-/* 
-"scroll-padding-top"
-Apply the "top-spacing" to anything that should show under the fixed element nav.
-https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
-*/
-
-html {
+/* Apply the "top-spacing" to anything that should show under the fixed element with the same height. */
+/* html {
   --top-spacing: 100px;
-  /* scroll-padding-top: var(--top-spacing); */
+  scroll-padding-top: var(--top-spacing);
+} */
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
 }
 
-/* main {
-  margin-top: var(--top-spacing);
-} */
+a {
+  color: #000;
+}
 
 nav {
-  /* --desktop-breakpoint: 48em; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  /* position: fixed; */
-  /* width: 100%; */
-  padding: 10px 20px;
   background-color: #fff;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  /* position: fixed; */
+  width: 100%;
+  height: var(--top-spacing);
+  scroll-padding-top: var(--top-spacing);
+  padding: 20px 0;
   z-index: 3;
-}
-
-/* nav > * {
-  flex: 1;
-} */
-
-nav h1 {
-  margin: 0;
-  font-size: initial;
-}
-
-nav a {
-  color: #000;
 }
 
 nav .logo {
   display: block;
-  /* float: left; */
-  font-size: 2em;
-  /* padding: 0 20px; */
+  float: left;
+  font-size: 2rem;
+  padding: 0 1rem;
   text-decoration: none;
 }
 
 /* menu */
 
+nav .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.4s linear;
+}
 
-nav ul.menu {
+nav ul {
   display: flex;
   flex-direction: column;
-
   margin: 0;
   padding-left: 0;
-
-  min-height: 0;
-  transition: min-height 0.4s linear;
-  
   list-style: none;
-  /* overflow: hidden; */
+  overflow: hidden;
   background-color: #fff;
 }
 
 nav li {
-  /* padding: 0 2em 2em 0; */
+  padding: 2em 2em;
   text-align: right;
+}
+
+nav li:first-of-type {
+  padding-top: 4rem;
+}
+
+nav li:last-of-type {
+  padding-bottom: 4rem;
 }
 
 nav li a {
@@ -78,18 +71,23 @@ nav li a {
 }
 
 nav li .view-all-artists-link {
-  border: 1px solid black;
-  padding: 0.25em 0.5em;
+  border: 1px solid #999;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--orange);
+  color: #fff;
+}
+/* maybe combine these two into one, if they're actually going to be the same. */
+nav .login-logout-link {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 
 nav .create-profile-btn,
-form#navbar-search-form #artist-search {
+form#navbar-search-form #artist_search {
   height: 2.5em;
-  /* padding: 0.5em; */
-}
-
-.menu-item-conditionally-authenticated {
-  margin-left: 1em;
+  padding: 0.5em;
 }
 
 nav .create-profile-btn {
@@ -137,11 +135,14 @@ nav > * {
 } */
 
 form#navbar-search-form button[type='submit'] {
-  display: none;
+  /* display: none; */
 }
-form#navbar-search-form #artist-search {
+form#navbar-search-form #artist_search {
   position: relative;
-  width: 20em;
+  width: 80%;
+  margin-right: 0.5rem;
+  
+  /* space for spyglass icon: */
   /* padding-right: 2em; */
 }
 
@@ -154,10 +155,10 @@ nav .menu-icon .menu-label-content,
 
 nav .menu-icon {
   cursor: pointer;
-  /* float: right; */
+  float: right;
   position: relative;
-  /* top: 28px; */
-  /* right: 34px; */
+  top: 19px;
+  right: 30px;
   user-select: none;
 }
 
@@ -196,7 +197,7 @@ nav .menu-btn {
 }
 
 nav .menu-btn:checked ~ .menu {
-  min-height: 80vh;
+  max-height: 400px;
 }
 
 nav .menu-btn:checked ~ .menu-icon .navicon {
@@ -217,25 +218,71 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 /* DESKTOP STYLES */
-/* 48em = 768px   */
+/* 48em (@16px) = 768px   */
 @media (min-width: 48em) {
-  /* nav {
+  nav {
     padding-bottom: 20px;
   }
-  nav li {
-    float: left;
-  }
-  nav li {
-    padding: 0 20px;
-  } */
-
-  nav ul.menu {
+  nav ul {
     flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     padding: 0;
-    min-height: none;
   }
-
+  nav .menu {
+    clear: none;
+    float: right;
+    height: 100%;
+    max-height: none;
+  }
+  nav li {
+    /* float: left; */
+    /* padding: 0 20px; */
+    padding: 0;
+    /* outline: 1px solid mediumslateblue; */
+  }
+  /* search form */
+  /* nav li:nth-child(1) { */
+  nav li.listItem-search {
+    /* flex: 1; */
+    /* flex-grow: 3;
+    flex-shrink: 1;
+    flex-basis: 0%; */
+    order: 2;
+    margin: 0 1rem;
+  }
+  /* view all artists */
+  /* nav li:nth-child(2) { */
+  nav li.listItem-viewAllArtists {
+    /* flex: 0.7; */
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%; */
+    order: 1;
+    margin: 0 1rem;
+  }
+  /* login */
+  /* nav li:nth-child(3) { */
+  nav li.listItem-logIn-logOut {
+    /* flex: 0.7; */
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%; */
+    order: 3;
+    margin: 0 1rem;
+  }
+  nav li:first-of-type {
+    padding-top: 0;
+  }
+  nav li:last-of-type {
+    padding-bottom: 0;
+  }
   nav .menu-icon {
     display: none;
   }
+
+  /* this isn't right, just a temp hack: */
+  /* form#navbar-search-form #artist_search {
+    width: 60%;
+  } */
 }
