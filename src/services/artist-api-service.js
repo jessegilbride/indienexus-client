@@ -16,8 +16,9 @@ const ArtistApiService = {
     })
     .then((res) => (!res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()));
   },
-  getAllTags() {},
-  getArtistsByTag() {},
+  // getAllTags() {},
+  // getArtistsByTag() {},
+  // getArtistsByNameSearch(searchString) {},
   postArtist(artist) {
     // name, bio, soundcloud_embed, tag, date_created
     return fetch(`${config.API_ENDPOINT}/artists`, {
