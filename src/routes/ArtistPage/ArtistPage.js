@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ArtistContext from '../../contexts/ArtistContext';
 import ArtistApiService from '../../services/artist-api-service';
-import { NiceDate, Section } from '../../components/Utils/Utils';
+// import { NiceDate, Section } from '../../components/Utils/Utils';
+import { NiceDate } from '../../components/Utils/Utils';
 import './ArtistPage.css';
 
 export default class ArtistPage extends Component {
@@ -27,10 +28,18 @@ export default class ArtistPage extends Component {
   // name, bio, soundcloud_embed, tag, date_created
   renderArtist() {
     const { artist } = this.context;
-    
-    function SoundCloudEmbed() {
+    console.log(artist);
+
+
+    /* const embeddedCodeString = artist.soundcloud_embed;
+    document.querySelector('.SoundCloudEmbed').innerHTML = embeddedCodeString; */
+
+    // substring(1, (artist.soundcloud_embed.length - 1))
+
+    /* function SoundCloudEmbed() {
       return <div dangerouslySetInnerHTML={{__html: artist.soundcloud_embed}} className='soundcloud-embed' />;
-    }    
+      // return <div dangerouslySetInnerHTML={{__html: updatedEmbed}} className='soundcloud-embed' />;
+    } */
 
     return (
       <>
@@ -48,7 +57,8 @@ export default class ArtistPage extends Component {
           Joined: <NiceDate date={artist.date_created} />
         </p>
         {/* <p>{artist.soundcloud_embed}</p> */}
-        <SoundCloudEmbed />
+        {/* <SoundCloudEmbed /> */}
+        {/* <div className='SoundCloudEmbed' /> */}
       </>
     );
   }
@@ -64,11 +74,11 @@ export default class ArtistPage extends Component {
           <p className='red'>There was an error</p>
         );
     } else if (!artist.id) {
-      content = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
+      content = <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
     } else {
       content = this.renderArtist();
     }
-    return <Section className='ArtistPage'>{content}</Section>;
+    return <section className='ArtistPage'>{content}</section>;
   }
 
 }

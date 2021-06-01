@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ArtistListContext from '../../contexts/ArtistListContext';
 import ArtistApiService from '../../services/artist-api-service';
-import { Section } from '../../components/Utils/Utils';
+// import { Section } from '../../components/Utils/Utils';
 import ArtistListItem from '../../components/ArtistListItem/ArtistListItem';
 
 export default class ArtistListPage extends Component {
@@ -25,14 +25,14 @@ export default class ArtistListPage extends Component {
   render() {
     const { error } = this.context;
     return (
-      <Section list className='ArtistListPage'>
+      <section className="page-width-container">
         <h2>List of All Artists</h2>
         {error ? (
           <p className='red'>There was an error, try again</p>
         ) : (
           this.renderArtists()
         )}
-      </Section>
+      </section>
     );
   }
 }
