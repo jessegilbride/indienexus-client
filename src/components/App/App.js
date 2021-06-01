@@ -38,7 +38,7 @@ class App extends Component {
         if the user doesn't trigger one of these event listeners,
           the idleCallback (logout) will be invoked
       */
-      IdleService.regiserIdleTimerResets();
+      IdleService.registerIdleTimerResets();
 
       /*
         Tell the token service to read the JWT, looking at the exp value
