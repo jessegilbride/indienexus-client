@@ -18,11 +18,6 @@
   flex-direction: column;
 } */
 
-.hyphen-spacer::before {
-  content: " - ";
-  margin: auto 0.5em;
-}
-
 @media screen and (min-width: 48em) {
   /* .Header {
     align-items: baseline;

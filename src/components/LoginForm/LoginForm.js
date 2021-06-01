@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import AuthApiService from '../../services/auth-api-service'
-import { Button, Input } from '../Utils/Utils'
+import React, { Component } from 'react';
+import AuthApiService from '../../services/auth-api-service';
 
 export default class LoginForm extends Component {
   static defaultProps = {
@@ -9,10 +8,10 @@ export default class LoginForm extends Component {
 
   state = { error: null }
 
-  handleSubmitJwtAuth = ev => {
-    ev.preventDefault()
+  handleSubmitJwtAuth = event => {
+    event.preventDefault()
     this.setState({ error: null })
-    const { user_name, password } = ev.target
+    const { user_name, password } = event.target
 
     AuthApiService.postLogin({
       user_name: user_name.value,
@@ -38,30 +37,30 @@ export default class LoginForm extends Component {
         <div role='alert'>
           {error && <p className='red'>{error}</p>}
         </div>
-        <div className='user_name'>
+        <div className='user_name form-section'>
           <label htmlFor='LoginForm__user_name'>
             User name
           </label>
-          <Input
+          <input
             required
             name='user_name'
             id='LoginForm__user_name'>
-          </Input>
+          </input>
         </div>
-        <div className='password'>
+        <div className='password form-section'>
           <label htmlFor='LoginForm__password'>
             Password
           </label>
-          <Input
+          <input
             required
             name='password'
             type='password'
             id='LoginForm__password'>
-          </Input>
+          </input>
         </div>
-        <Button type='submit'>
+        <button type='submit'>
           Login
-        </Button>
+        </button>
       </form>
     )
   }

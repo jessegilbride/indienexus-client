@@ -1,41 +1,78 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-* {
-  box-sizing: border-box;
+
+/* 
+The "scroll-padding-top" hack to allow for fixed headers to not overlap content with in-page jump links, via CSS-Tricks:
+https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/
+
+1) Create a CSS variable, "top-spacing" (suggested), in the top level (html or :root), at some large enough value to account for header height.
+2) Apply that "top-spacing" to a scroll-padding-top property in that top level.
+3) Apply the "top-spacing" to the margin-top of the body.
+4) Make sure the header with position:fixed also has top:0 applied to it.
+*/
+
+:root {
+  --top-spacing: 80px;
+  --blue: #477ACC;
+  --yellow: #EAC435;
+  --green: #09a55e;
+  --red: #CA1551;
+  --orange: #FB4D3D;
+  --mint: #6CF1B7;
+  --eggplant: #262336;
+}
+
+html {
+  scroll-padding-top: var(--top-spacing);
 }
 
 body {
-  margin: 0;
+  margin: var(--top-spacing) 0 0;
   padding: 0;
+  /* background-color: var(--eggplant); */
+  /* color: var(--mint); */
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #222;
+a {
+  /* color: var(--mint); */
 }
 
-p {
-  color: #555;
+* {
+  box-sizing: border-box;
 }
 
-.blue {
-  color: #477ACC;
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
 }
 
-.yellow {
-  color: #EAC435;
+input,
+textarea {
+  border: 1px solid #999;
+  display: inline-block;
+  /* margin-bottom: 10px; */
+  padding: 0.5rem;
+  text-align: left;
+  /* width: 80%; */
+  border-radius: 4px;
 }
 
-.green {
-  color: #09a55e;
+textarea {
+  resize: vertical;
 }
 
-.red {
-  color: #CA1551;
+button {
+  border: 1px solid #aaa;
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 8px 12px;
+  /* font-weight: bold; */
 }
 
-.orange {
-  color: #FB4D3D;
+.form-section {
+  margin-bottom: 2rem;
 }
