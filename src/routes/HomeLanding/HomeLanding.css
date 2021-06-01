@@ -1,0 +1,10 @@
+.site-intro-section {
+  padding: 4rem;
+  background-color: var(--eggplant);
+}
+
+.site-intro-content {
+  font-size: 150%;
+  line-height: 1.5;
+  color: var(--mint);
+}
