@@ -10,10 +10,14 @@ export default class HomeLanding extends Component {
   render() {
     return (
       <Fragment>
-        <p>IndieNexus is the hub for independent music artists to showcase themselves, gain exposure, and connect with fans. Explore the various genres, or search for artists by name.</p>
-        <div>
-          {/* <TagList /> */}
-        </div>
+        <section className='site-intro-section'>
+          <p className='site-intro-content'>IndieNexus is the hub for independent music artists to showcase themselves, gain exposure, and connect with fans. Explore the various genres, or search for artists by name.</p>
+        </section>
+        <section>
+          <div>
+            {/* <TagList /> */}
+          </div>
+        </section>
       </Fragment>
     );
   }
