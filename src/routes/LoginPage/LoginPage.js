@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import LoginForm from '../../components/LoginForm/LoginForm'
-import { Section } from '../../components/Utils/Utils'
+// import { Section } from '../../components/Utils/Utils'
+import './LoginPage.css';
 
 export default class LoginPage extends Component {
   static defaultProps = {
@@ -12,14 +14,15 @@ export default class LoginPage extends Component {
 
   handleLoginSuccess = () => {
     const { location, history } = this.props;
-    const destination = (location.state || {}).from || '/';
+    const destination = (location.state || {}).from || '/'; // *** huh?
     history.push(destination);
   }
 
   render() {
     return (
-      <Section className='LoginPage'>
+      <section className='LoginPage'>
         <h2>Login</h2>
+        <p className='register-message'>Don't have an account yet? <Link to='/register' className='register-link'>Register Here</Link></p>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
 
         <p>sample login (from database seed):</p>
@@ -28,7 +31,7 @@ export default class LoginPage extends Component {
           <br />
           password: swSf5Hti
         </p>
-      </Section>
+      </section>
     )
   }
 }
