@@ -1,0 +1,12 @@
+.register-message {
+  margin: 2rem 0;
+}
+
+.register-link {
+  background-color: yellow;
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
