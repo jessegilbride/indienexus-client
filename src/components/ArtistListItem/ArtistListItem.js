@@ -5,16 +5,16 @@ import './ArtistListItem.css';
 
 export default class ArtistListItem extends Component {
   render() {
-    /* id, name, bio, soundcloud_embed, tag, date_created */
+    /* id, name, bio, soundcloud_embed, tags, date_created */
     const { artist } = this.props;
     // console.log(artist);
     return (
       <Link to={`/artist/${artist.id}`} className='ArtistListItem'>
         <header className='ArtistListItem__header'>
-          <h2 className='ArtistListItem__heading'>{artist.name}</h2>
+          <h3 className='ArtistListItem__heading'>{artist.name}</h3>
         </header>
         <footer className='ArtistListItem__footer'>
-          <div><ArtistTags artist={artist} /></div>
+          {/* <div><ArtistTags artist={artist} /></div> */}
           <div><ArtistDate artist={artist} /></div>
         </footer>
       </Link>
@@ -22,13 +22,17 @@ export default class ArtistListItem extends Component {
   }
 }
 
-function ArtistTags({ artist }) {
+ArtistListItem.defaultProps = {
+  artist: {}
+}
+
+/* function ArtistTags({ artist }) {
   return (
     <span className=''>
-      {artist.tag}
+      Tags: {artist.tags}
     </span>
   );
-}
+} */
 
 function ArtistDate({ artist }) {
   return (

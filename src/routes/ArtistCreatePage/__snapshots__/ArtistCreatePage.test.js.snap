@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistCreatePage component renders the UI as expected 1`] = `
+Array [
+  <section>
+    <h2>
+      Create Profile
+    </h2>
+    <p>
+      When creating your profile, remember to give the 'bio' a personal touch. Remember the reader; your fans and those who would hire you want to get a sense of your background and inspirations. And don't forget to proveide links to your social media, and contact information for getting hired.
+    </p>
+    <p>
+      Adding tags is optional, but recommended. Tags are searchable and help people find artists who use them.
+    </p>
+  </section>,
+  <section>
+    <form
+      className="ArtistCreatePage"
+      onSubmit={[Function]}
+    >
+      <div
+        className="form-section"
+      >
+        <label
+          htmlFor="artist-name"
+        >
+          Name
+        </label>
+        <input
+          id="name"
+          name="name"
+          placeholder=""
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="form-section"
+      >
+        <label
+          htmlFor="bio"
+        >
+          Bio
+        </label>
+        <textarea
+          id="bio"
+          name="bio"
+          required={true}
+          rows="10"
+        />
+      </div>
+      <div
+        className="form-section"
+      >
+        <label
+          htmlFor="tags"
+        >
+          Tags (comma-separated)
+        </label>
+        <input
+          id="tags"
+          name="tags"
+          placeholder=""
+          type="text"
+        />
+      </div>
+      <div
+        className="form-section"
+      >
+        <label
+          htmlFor="audioEmbed"
+        >
+          SoundCloud Embed (see instructions above)
+        </label>
+        <input
+          id="audioEmbed"
+          name="audioEmbed"
+          placeholder=""
+          type="text"
+        />
+      </div>
+      <div
+        className="button-section"
+      >
+        <button
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </section>,
+]
+`;

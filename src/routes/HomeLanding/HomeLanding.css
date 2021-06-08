@@ -1,3 +1,20 @@
+.homepage-banner {
+  min-height: calc(100vh - var(--top-spacing));
+  background: url('../../images/homepage-banner.jpg') no-repeat;
+}
+
+.homepage-banner h1 {
+  padding: 5rem 1rem;
+  font-size: 3.4rem;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.featured-artist {
+  background-color: lightsalmon;
+}
+
 .site-intro-section {
   padding: 4rem;
   background-color: var(--eggplant);

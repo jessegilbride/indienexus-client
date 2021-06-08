@@ -20,12 +20,13 @@ const ArtistApiService = {
   // getArtistsByTag() {},
   // getArtistsByNameSearch(searchString) {},
   postArtist(artist) {
-    // name, bio, soundcloud_embed, tag, date_created
+    const token = 'bearer ' + TokenService.getAuthToken()
     return fetch(`${config.API_ENDPOINT}/artists`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
+        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'authorization': token,
       },
       body: JSON.stringify(artist),
     })

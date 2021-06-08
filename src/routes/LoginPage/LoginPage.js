@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import LoginForm from '../../components/LoginForm/LoginForm'
-// import { Section } from '../../components/Utils/Utils'
 import './LoginPage.css';
 
 export default class LoginPage extends Component {
@@ -21,7 +20,7 @@ export default class LoginPage extends Component {
   render() {
     return (
       <section className='LoginPage'>
-        <h2>Login</h2>
+        <h2 className='page-heading'>Login</h2>
         <p className='register-message'>Don't have an account yet? <Link to='/register' className='register-link'>Register Here</Link></p>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
 

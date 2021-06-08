@@ -55,6 +55,7 @@ export default class Header extends Component {
         <input className='menu-btn' type='checkbox' id='menu-btn' />
         <label className='menu-icon' htmlFor='menu-btn'>
           <span className='menu-label-content'>Menu</span>
+          <div></div>
           <span className='navicon'></span>
         </label>
         <ul className='menu'>
@@ -68,7 +69,13 @@ export default class Header extends Component {
             </form>
           </li>} */}
           <li className='listItem-viewAllArtists'><Link to='/artist-list' className='view-all-artists-link' onClick={this.handleMobileNavUsage}> View All Artists </Link></li>
-          <li className='listItem-logIn-logOut'>{TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}</li>
+          {/* <li className='listItem-logIn-logOut'>{TokenService.hasAuthToken() ? this.renderLogoutLink() : this.renderLoginLink()}</li> */}
+          <li className='listItem-logIn-logOut'>{TokenService.hasAuthToken() ? 
+          <div className='Header__logged-in'>
+            <Link to='/create-profile' className='create-profile-btn' onClick={this.handleMobileNavUsage}>Create profile</Link>
+            <Link onClick={this.handleLogoutClick} to='/' className='login-logout-link'>Log out</Link>
+          </div> : 
+          <Link to='/login' className='login-logout-link' onClick={this.handleMobileNavUsage}>Log in</Link>}</li>
         </ul>
       </nav>
     );

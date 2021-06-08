@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
+/* @import url('https://fonts.googleapis.com/css?family=Raleway'); */
 
 /* 
 The "scroll-padding-top" hack to allow for fixed headers to not overlap content with in-page jump links, via CSS-Tricks:
@@ -11,8 +10,11 @@ https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my
 4) Make sure the header with position:fixed also has top:0 applied to it.
 */
 
-:root {
+/* GLOBAL STYLES */
+
+/* :root {
   --top-spacing: 80px;
+  --header-bgcolor: #fff;
   --blue: #477ACC;
   --yellow: #EAC435;
   --green: #09a55e;
@@ -29,19 +31,18 @@ html {
 body {
   margin: var(--top-spacing) 0 0;
   padding: 0;
-  /* background-color: var(--eggplant); */
-  /* color: var(--mint); */
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  /* color: var(--mint); */
-}
-
 * {
   box-sizing: border-box;
+}
+
+main > section {
+  min-height: 100px;
+  padding: 0 1rem;
 }
 
 button, input, optgroup, select, textarea {
@@ -54,10 +55,8 @@ input,
 textarea {
   border: 1px solid #999;
   display: inline-block;
-  /* margin-bottom: 10px; */
   padding: 0.5rem;
   text-align: left;
-  /* width: 80%; */
   border-radius: 4px;
 }
 
@@ -69,10 +68,38 @@ button {
   border: 1px solid #aaa;
   background-color: #eee;
   border-radius: 4px;
-  padding: 8px 12px;
-  /* font-weight: bold; */
+  padding: 0.5rem 0.75rem;
+}
+
+.page-top-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-top-banner h2 {
+  padding: 0.75em 1.5em;
+  background: #000D;
+  color: #f66;
+  font-size: 240%;
+  border-radius: 50px;
+}
+
+.page-heading {
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: xx-large;
 }
 
 .form-section {
   margin-bottom: 2rem;
 }
+
+.form-section label {
+  display: inline-block;
+  width: 100px;
+} */

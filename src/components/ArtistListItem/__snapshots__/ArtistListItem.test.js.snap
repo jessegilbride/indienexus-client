@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistListItem component renders the UI as expected 1`] = `
+<a
+  className="ArtistListItem"
+  href="/artist/undefined"
+  onClick={[Function]}
+>
+  <header
+    className="ArtistListItem__header"
+  >
+    <h3
+      className="ArtistListItem__heading"
+    />
+  </header>
+  <footer
+    className="ArtistListItem__footer"
+  >
+    <div>
+      <span
+        className=""
+      >
+        Tags: 
+      </span>
+    </div>
+    <div>
+      <span
+        className="ArtistListItem__date"
+      >
+        Joined: 
+        Invalid Date
+      </span>
+    </div>
+  </footer>
+</a>
+`;

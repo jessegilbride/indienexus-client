@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import ArtistListContext from '../../contexts/ArtistListContext';
 import ArtistApiService from '../../services/artist-api-service';
-// import { Section } from '../../components/Utils/Utils';
 import ArtistListItem from '../../components/ArtistListItem/ArtistListItem';
+import './ArtistListPage.css';
 
 export default class ArtistListPage extends Component {
   static contextType = ArtistListContext;
@@ -25,14 +25,18 @@ export default class ArtistListPage extends Component {
   render() {
     const { error } = this.context;
     return (
-      <section className="page-width-container">
-        <h2>List of All Artists</h2>
-        {error ? (
-          <p className='red'>There was an error, try again</p>
-        ) : (
-          this.renderArtists()
-        )}
-      </section>
+      <Fragment>
+        <section className="page-width-container page-top-banner artist-list-banner">
+          <h2 className='page-heading'>List of All Artists</h2>
+        </section>
+        <section className="artist-list page-width-container">
+          {error ? (
+            <p className='red'>There was an error, try again</p>
+          ) : (
+            this.renderArtists()
+          )}
+        </section>
+      </Fragment>
     );
   }
 }

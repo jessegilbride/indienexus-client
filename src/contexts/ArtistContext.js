@@ -6,7 +6,7 @@ const nullArtist = {
   date_created: '',
   name: '',
   soundcloud_embed: '',
-  tags: []
+  // tags: []
 };
 
 /* context initialized to blanks */

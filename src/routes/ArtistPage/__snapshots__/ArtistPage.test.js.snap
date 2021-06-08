@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistPage component renders the UI as expected 1`] = `
+<section
+  className="ArtistPage"
+>
+  <div
+    className="lds-roller"
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+</section>
+`;

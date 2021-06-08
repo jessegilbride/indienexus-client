@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArtistListPage component renders the UI as expected 1`] = `
+Array [
+  <section
+    className="page-width-container page-top-banner artist-list-banner"
+  >
+    <h2
+      className="page-heading"
+    >
+      List of All Artists
+    </h2>
+  </section>,
+  <section
+    className="artist-list page-width-container"
+  />,
+]
+`;

@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders the UI as expected 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App__header"
+  >
+    <nav
+      role="navigation"
+    >
+      <a
+        className="logo"
+        href="/"
+        onClick={[Function]}
+      >
+        IndieNexus
+      </a>
+      <input
+        className="menu-btn"
+        id="menu-btn"
+        type="checkbox"
+      />
+      <label
+        className="menu-icon"
+        htmlFor="menu-btn"
+      >
+        <span
+          className="menu-label-content"
+        >
+          Menu
+        </span>
+        <div />
+        <span
+          className="navicon"
+        />
+      </label>
+      <ul
+        className="menu"
+      >
+        <li
+          className="listItem-viewAllArtists"
+        >
+          <a
+            className="view-all-artists-link"
+            href="/artist-list"
+            onClick={[Function]}
+          >
+             View All Artists 
+          </a>
+        </li>
+        <li
+          className="listItem-logIn-logOut"
+        >
+          <a
+            className="login-logout-link"
+            href="/login"
+            onClick={[Function]}
+          >
+            Log in
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main
+    className="App__main"
+  >
+    <section
+      className="page-top-banner homepage-banner"
+    >
+      <h1
+        className=""
+      >
+        IndieNexus.
+        <br />
+        <span
+          className="bi-line"
+        >
+          Where artists and fans converge.
+        </span>
+      </h1>
+    </section>
+    <section
+      className="homepage-section featured-artist"
+    />
+    <section
+      className="site-intro-section"
+    >
+      <p
+        className="site-intro-content"
+      >
+        This is the hub for independent music artists to showcase themselves, gain exposure, and connect with fans. Explore the various genres, or search for artists by name.
+      </p>
+    </section>
+    <section>
+      <div />
+    </section>
+  </main>
+</div>
+`;
