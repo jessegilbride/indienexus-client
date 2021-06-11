@@ -13,10 +13,10 @@ export default class ArtistListItem extends Component {
         <header className='ArtistListItem__header'>
           <h3 className='ArtistListItem__heading'>{artist.name}</h3>
         </header>
-        <footer className='ArtistListItem__footer'>
+        <div className='ArtistListItem__footer'>
           {/* <div><ArtistTags artist={artist} /></div> */}
           <div><ArtistDate artist={artist} /></div>
-        </footer>
+        </div>
       </Link>
     );
   }

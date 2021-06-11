@@ -1,14 +1,24 @@
+footer {
+  padding: 1rem;
+  background: url(../../images/tile-darkNoise-140x140.jpg);
+  color: var(--mint);
+}
+
 .homepage-banner {
   min-height: calc(100vh - var(--top-spacing));
   background: url('../../images/homepage-banner.jpg') no-repeat;
 }
 
 .homepage-banner h1 {
-  padding: 5rem 1rem;
-  font-size: 3.4rem;
+  padding: 1rem;
+  font-size: 2.4rem;
   font-weight: normal;
   text-align: center;
   line-height: 1.5;
+}
+
+h1 .bi-line {
+
 }
 
 .featured-artist {
@@ -18,10 +28,18 @@
 .site-intro-section {
   padding: 4rem;
   background-color: var(--eggplant);
+  border-top: 3px solid var(--yellow);
+  border-bottom: 3px solid var(--green);
 }
 
 .site-intro-content {
   font-size: 150%;
   line-height: 1.5;
   color: var(--mint);
+}
+
+@media screen and (min-width: 48em) {
+  .homepage-banner h1 {
+    font-size: 3.2rem;
+  }
 }

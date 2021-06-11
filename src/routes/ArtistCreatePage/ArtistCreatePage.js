@@ -45,6 +45,7 @@ export default class ArtistCreatePage extends Component {
             <li>Click on the "Embed" tab of the overlay, copy the HTML code in the "Code" section.</li>
             <li>On this page, paste that HTML code into the "SoundCloud Embed" form field. (Please note, you can only have one embed on your profile at this time.)</li>
           </ol>
+          <small>Original instructions: <a href='https://help.soundcloud.com/hc/en-us/articles/115003568008' target='_blank' rel='noopener noreferrer'>here</a>.</small>
         </section>
         <section>
           <form className='ArtistCreatePage' onSubmit={this.handleSubmit}>

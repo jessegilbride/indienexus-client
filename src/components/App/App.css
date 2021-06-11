@@ -16,7 +16,7 @@
 .App__main {
   /* height: calc(100vh - var(--top-spacing)); */
   /* overflow: auto; */
-  padding-bottom: 2em;
+  /* padding-bottom: 2em; */
 }
 
 .page-width-container, .App__header > nav, .App__main > * {
@@ -44,6 +44,7 @@ https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my
   --green: #09a55e;
   --red: #CA1551;
   --orange: #FB4D3D;
+  --orange2: #FF7043;
   --mint: #6CF1B7;
   --eggplant: #262336;
 }
@@ -99,7 +100,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
+  min-height: 400px;
   background-size: cover;
   background-position: center;
 }

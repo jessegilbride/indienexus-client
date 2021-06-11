@@ -1,18 +1,65 @@
+.ArtistPage {
+  padding-top: 1rem;
+}
+
+.profile-header {
+  background-image:  url(../../images/spectralGraph-small.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10rem;
+  padding: 1rem 0;
+}
+
+.profile-header h2 {
+  align-self: center;
+  font-size: 1.4em;
+  color: #fff;
+}
+
 .soundcloud-embed {max-width: 600px;}
 
+@media (min-width: 480px) {
+  .profile-header {
+    background-image: url(../../images/spectralGraph-medium.jpg);
+    height: 12rem;
+  }
+  .profile-header h2 {
+    font-size: 2em;
+  }
+}
 
-
-
-
+@media (min-width: 768px) {
+  .ArtistPage {
+    padding-top: 0;
+  }
+  .profile-header {
+    background-image: url(../../images/spectralGraph-large.jpg);
+    height: 16rem;
+  }
+  .profile-header h2 {
+    font-size: 2.4em;
+  }
+}
 
 /* ---------- loading spinner ---------- */
+.spinner-container {
+  display: flex;
+  height: calc(100vh - var(--top-spacing));
+}
 .lds-roller {
-  background-color: lightgrey;
+  background-color: var(--orange2);
   border-radius: 50%;
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
+  align-self: center;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 .lds-roller div {
   background-color: black;

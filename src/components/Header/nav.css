@@ -66,6 +66,7 @@ nav li .view-all-artists-link {
 }
 /* maybe combine these (above and below) into one, if they're actually going to be the same. */
 nav .login-logout-link {
+  margin-left: 1rem;
   border: 1px solid #999;
   padding: 0.5rem;
   border-radius: 4px;
@@ -80,10 +81,10 @@ form#navbar-search-form #artist_search {
 nav .create-profile-btn {
   display: inline-block;
   position: relative;
-  border: 1px solid black;
-  background-color: darksalmon;
-  /* color: white;
-  font-weight: 800; */
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: var(--blue);
+  color: white;
 }
 
 nav .create-profile-btn:hover {

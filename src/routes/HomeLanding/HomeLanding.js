@@ -18,17 +18,21 @@ export default class HomeLanding extends Component {
           </h1>
         </section>
 
-        <section className='homepage-section featured-artist'></section>
+        {/* <section className='homepage-section featured-artist'></section> */}
         
         <section className='site-intro-section'>
           <p className='site-intro-content'>This is the hub for independent music artists to showcase themselves, gain exposure, and connect with fans. Explore the various genres, or search for artists by name.</p>
         </section>
         
-        <section>
+        {/* <section>
           <div>
-            {/* <TagList /> */}
+            <TagList />
           </div>
-        </section>
+        </section> */}
+
+        <footer>
+          <small>&copy; IndieNexus</small>
+        </footer>
       </Fragment>
     );
   }

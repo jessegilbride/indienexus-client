@@ -56,8 +56,9 @@ export default class ArtistPage extends Component {
 
     return (
       <>
-        <h2>{artist.name}</h2>
-        {/* <p>id: {artist.id}</p> */}
+        <header class="profile-header">
+          <h2>{artist.name}</h2>
+        </header>
         <p>
           {/* <ArtistBio artist={artist} /> */}
           {artist.bio}
@@ -95,7 +96,7 @@ export default class ArtistPage extends Component {
           <p className='red'>There was an error. Sorry about that.</p>
         );
     } else if (!artist.id) {
-      content = <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
+      content = <span className='spinner-container'><div className="lds-roller"> <div></div> <div></div> <div></div> </div></span>;
     } else {
       content = this.renderArtist();
     }
