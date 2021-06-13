@@ -44,7 +44,7 @@ export default class LoginForm extends Component {
           <input
             required
             name='user_name'
-            // defaultValue='jwhitlock'
+            // defaultValue='demoUser'
             id='LoginForm__user_name'>
           </input>
         </div>
@@ -56,7 +56,7 @@ export default class LoginForm extends Component {
             required
             name='password'
             type='password'
-            // defaultValue='swSf5Hti'
+            // defaultValue='Hello123'
             id='LoginForm__password'>
           </input>
         </div>
