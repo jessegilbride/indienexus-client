@@ -12,72 +12,27 @@ Artist profiles currently allow you to have an artist name, bio (description), a
 This projects uses React, Node, Express, knexJS, PostgreSQL, and JWT for user authentication.
 
 ## Screenshots
-<div class='row'>
-    <span class='full-width'>
-    <p>hompage (desktop)</p>
-    <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-homepage-desktop.jpeg?raw=true' class='' />
-</span>
-</div>
 
-<div class='row'>
-    <   '>
-    <p>homepage (mobile)</p>
-    <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-homepage-mobile.jpeg?raw=true' class='' />
-    </span>
-    <span class='half-width right'>
-    <p>artist list (mobile)</p>
-    <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-artist-list-mobile.jpeg?raw=true' class='' />
-    </span>
-</div>
 
-<div class='row'>
-    <span class='half-width left'>
-    <p>login (mobile)</p>
-    <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-login-mobile.jpeg?raw=true' class='' />
-    </span>
-    <span class='half-width right'>
-    <p>create profile (mobile)</p>
-    <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-create-profile-mobile.jpeg?raw=true' class='' />
-    </span>
-</div>
+<img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-homepage-desktop.jpeg?raw=true' width='' />
+<p>homepage (desktop)</p>
 
-<style>
-.row {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
-.row p {
-    margin-block-end: 0;
-    padding-bottom: 0.5rem;
-    font-size: larger;
-    text-align: center;
-    border-bottom: 1px solid lightgrey;
-}
-.full-width {
-    width: auto;
-    margin: 0 auto;
-}
-.full-width img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-}
-.half-width {
-    max-width: 375px;
-    margin: 20px auto 0;
-}
-.half-width img {
-    width: 100%;
-}
-@media screen and (min-width: 768px) {
-    .row {
-        flex-direction: row;
-    }
-    .half-width {
-        max-width: unset;
-        width: 46%;
-        margin: 40px 2% 0;
-    }
-}
-</style>
+&nbsp;
+
+<img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-homepage-mobile.jpeg?raw=true' width='400px' />
+<p>homepage (mobile)</p>
+
+&nbsp;
+
+<img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-artist-list-mobile.jpeg?raw=true' width='400px' />
+<p>artist list (mobile)</p>
+
+&nbsp;
+
+<img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-login-mobile.jpeg?raw=true' width='400px' />
+<p>login (mobile)</p>
+
+&nbsp;
+
+<img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-create-profile-mobile.jpeg?raw=true' width='400px' />
+<p>create profile (mobile)</p>
