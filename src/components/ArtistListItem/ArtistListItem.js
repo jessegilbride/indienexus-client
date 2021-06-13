@@ -5,9 +5,7 @@ import './ArtistListItem.css';
 
 export default class ArtistListItem extends Component {
   render() {
-    /* id, name, bio, soundcloud_embed, tags, date_created */
     const { artist } = this.props;
-    // console.log(artist);
     return (
       <Link to={`/artist/${artist.id}`} className='ArtistListItem'>
         <header className='ArtistListItem__header'>

@@ -14,7 +14,6 @@ export default class ArtistCreatePage extends Component {
     /* const soundcloud_embed = btoa(audioEmbed.value); // convert to base64 */
     const artist =  {
       name:name.value,
-      /* user_id: ???, */
       bio:bio.value,
       // tags:tags.value,
       soundcloud_embed: audioEmbed.value

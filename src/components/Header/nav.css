@@ -223,38 +223,20 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     max-height: none;
   }
   nav li {
-    /* float: left; */
-    /* padding: 0 20px; */
     padding: 0;
-    /* outline: 1px solid mediumslateblue; */
   }
   /* search form */
-  /* nav li:nth-child(1) { */
   nav li.listItem-search {
-    /* flex: 1; */
-    /* flex-grow: 3;
-    flex-shrink: 1;
-    flex-basis: 0%; */
     order: 2;
     margin: 0 1rem;
   }
   /* view all artists */
-  /* nav li:nth-child(2) { */
   nav li.listItem-viewAllArtists {
-    /* flex: 0.7; */
-    /* flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%; */
     order: 1;
     margin: 0 1rem;
   }
   /* login */
-  /* nav li:nth-child(3) { */
   nav li.listItem-logIn-logOut {
-    /* flex: 0.7; */
-    /* flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%; */
     order: 3;
     margin: 0 1rem;
   }
@@ -268,8 +250,4 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     display: none;
   }
 
-  /* this isn't right, just a temp hack: */
-  /* form#navbar-search-form #artist_search {
-    width: 60%;
-  } */
 }

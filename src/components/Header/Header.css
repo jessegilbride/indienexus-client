@@ -1,35 +1,5 @@
-/* .Header {
-  --desktop-breakpoint: 48em;
-  display: flex;
-  align-items: normal;
-  justify-content: space-between;
-} */
 
-/* .Header h1 {
-  margin: 0;
-} */
-
-/* .Header h1 a {
-  text-decoration: none;
-} */
-
-/* .Header__not-logged-in {
-  display: flex;
-  flex-direction: column;
-} */
 
 @media screen and (min-width: 48em) {
-  /* .Header {
-    align-items: baseline;
-  } */
-
-  /* .Header h1 {
-    font-size: 22pt;
-  } */
-
-  /* .Header__not-logged-in {
-    flex-direction: row;
-  } */
-
   
 }

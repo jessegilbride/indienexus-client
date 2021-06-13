@@ -4,9 +4,6 @@ import { MemoryRouter } from "react-router-dom";
 import renderer from 'react-test-renderer';
 import TagList from './TagList';
 
-// package.JSON for ignoring a test: 
-/* "test": "react-scripts test --testPathIgnorePatterns=<path>" */
-
 describe('TagList component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
