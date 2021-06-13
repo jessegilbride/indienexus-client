@@ -20,11 +20,10 @@ This projects uses React, Node, Express, knexJS, PostgreSQL, and JWT for user au
 </div>
 
 <div class='row'>
-    <span class='half-width left'>
+    <   '>
     <p>homepage (mobile)</p>
     <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-homepage-mobile.jpeg?raw=true' class='' />
     </span>
-
     <span class='half-width right'>
     <p>artist list (mobile)</p>
     <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-artist-list-mobile.jpeg?raw=true' class='' />
@@ -36,7 +35,6 @@ This projects uses React, Node, Express, knexJS, PostgreSQL, and JWT for user au
     <p>login (mobile)</p>
     <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-login-mobile.jpeg?raw=true' class='' />
     </span>
-
     <span class='half-width right'>
     <p>create profile (mobile)</p>
     <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-create-profile-mobile.jpeg?raw=true' class='' />
