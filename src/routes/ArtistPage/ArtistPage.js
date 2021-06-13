@@ -18,7 +18,6 @@ export default class ArtistPage extends Component {
     ArtistApiService.getArtist(artistId)
       .then(this.context.setArtist)
       .catch(this.context.setError);
-
   }
 
   componentWillUnmount() {
@@ -28,58 +27,48 @@ export default class ArtistPage extends Component {
   // name, bio, soundcloud_embed, tags, date_created
   renderArtist() {
     const { artist } = this.context;
-    // console.log('artist: ', artist);
-    // console.log(artist.soundcloud_embed)
 
-    // let str = 'Twas the night before Xmas...';
-    // let newstr = str.replace(/xmas/i, 'Christmas');
-    // console.log(newstr);  // Twas the night before Christmas...
+    /* function ArtistTags({ artist }) {
+      return (
+        <span className=''>Tags: {artist.tags}</span>
+      );
+    } */
 
-    const cleanedUpEmbed = artist.soundcloud_embed.replace(/&lt;/g, '<');
-    // console.log(JSON.parse(cleanedUpEmbed));
-    // console.log(typeof(cleanedUpEmbed));
-    // console.log('cleanedUpEmbed: ', cleanedUpEmbed);
-    
-    // const cleanedUpEmbed = ArtistContext.artist.soundcloud_embed.replace(/&lt;/g, '<');
-    // document.querySelector('.SoundCloudEmbed').innerHTML = cleanedUpEmbed;
+    function ArtistBio() {
+      return <p className='ArtistPage__content'>{artist.bio}</p>;
+    }
 
-    // substring(1, (artist.soundcloud_embed.length - 1))
+    function AudioEmbed() {
+      // const cleanedUpEmbed = artist.soundcloud_embed.replace(/&lt;/g, '<');
+      artist.soundcloud_embed = artist.soundcloud_embed.replace(/&lt;/g, '<');
+      artist.soundcloud_embed = artist.soundcloud_embed.replace(/&gt;/g, '>');
+      // console.log(artist.soundcloud_embed)
 
-    /* const embeddedCodeString = artist.soundcloud_embed;
-    console.log(embeddedCodeString)
-    document.querySelector('.soundcloud-embed').innerHTML = embeddedCodeString; */
-
-    function SoundCloudEmbed() {
-      // return <div dangerouslySetInnerHTML={{__html: artist.soundcloud_embed}} className='soundcloud-embed' />;
-      return <div dangerouslySetInnerHTML={{__html: cleanedUpEmbed}} className='soundcloud-embed' />;
+      // return <div dangerouslySetInnerHTML={{__html: cleanedUpEmbed}} className='audio-embed' />;
+      return <div dangerouslySetInnerHTML={{__html: artist.soundcloud_embed}} className='audio-embed' />;
     }
 
     return (
       <>
-        <header class="profile-header">
+        <header className="profile-header">
           <h2>{artist.name}</h2>
         </header>
-        <p>
-          {/* <ArtistBio artist={artist} /> */}
-          {artist.bio}
-        </p>
+
+        <ArtistBio />
+
         {/* <p>
           <ArtistTags artist={artist} />
         </p> */}
         {/* <p>
           Tags: {artist.tags}
         </p> */}
+
         <p>
           Joined: <NiceDate date={artist.date_created} />
         </p>
         
-        {/* <p>{artist.soundcloud_embed}</p> */}
+        <AudioEmbed />
         
-        <SoundCloudEmbed />
-        
-        {/* <div className='soundcloud-embed' /> */}
-        
-        {/* <div>{cleanedUpEmbed}</div> */}
       </>
     );
   }
@@ -104,15 +93,3 @@ export default class ArtistPage extends Component {
   }
 
 }
-
-/* function ArtistTags({ artist }) {
-  return (
-    <span className=''>
-      {artist.tags}
-    </span>
-  );
-} */
-
-/* function ArtistBio({ artist }) {
-  return <p className='ArtistPage__content'>{artist.bio}</p>;
-} */
