@@ -3,6 +3,8 @@ _A hub for independent music artists to showcase themselves, gain exposure, and 
 
 Live app: https://indienexus-client.vercel.app/
 
+API repo: https://github.com/jessegilbride/indienexus-api
+
 ## Summary
 View all artists (without having to log in), register an account, log in as your user, and create an artist profile.
 
@@ -15,22 +17,27 @@ This projects uses React, Node, Express, knexJS, PostgreSQL, and JWT for user au
 
 
 <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-homepage-desktop.jpeg?raw=true' width='' />
-<p>homepage (desktop)</p>
+
+> homepage (desktop)
 
 &nbsp;
 
 <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-homepage-mobile.jpeg?raw=true' width='400px' />
-<p>homepage (mobile)</p>
+
+> homepage (mobile)
 
 &nbsp;
 
+> artist list (mobile)
 <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-artist-list-mobile.jpeg?raw=true' width='400px' />
-<p>artist list (mobile)</p>
+<!-- > artist list (mobile) -->
 
 &nbsp;
+
+> login (mobile)
 
 <img src='https://github.com/jessegilbride/indienexus-client/blob/master/screenshots/IndieNexus-login-mobile.jpeg?raw=true' width='400px' />
-<p>login (mobile)</p>
+<!-- <p>login (mobile)</p> -->
 
 &nbsp;
 
