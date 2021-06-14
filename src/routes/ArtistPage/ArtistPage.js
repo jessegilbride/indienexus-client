@@ -35,7 +35,7 @@ export default class ArtistPage extends Component {
     } */
 
     function ArtistBio() {
-      return <p className='ArtistPage__content'>{artist.bio}</p>;
+      return <div className='artist-bio'>{artist.bio}</div>;
     }
 
     function AudioEmbed() {
@@ -54,6 +54,11 @@ export default class ArtistPage extends Component {
           <h2>{artist.name}</h2>
         </header>
 
+        <p>
+          Joined: <NiceDate date={artist.date_created} />
+        </p>
+
+        <h3>Artist bio</h3>
         <ArtistBio />
 
         {/* <p>
@@ -62,10 +67,6 @@ export default class ArtistPage extends Component {
         {/* <p>
           Tags: {artist.tags}
         </p> */}
-
-        <p>
-          Joined: <NiceDate date={artist.date_created} />
-        </p>
         
         <AudioEmbed />
         
