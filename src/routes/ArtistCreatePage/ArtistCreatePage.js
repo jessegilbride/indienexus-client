@@ -35,19 +35,18 @@ export default class ArtistCreatePage extends Component {
     return (
       <Fragment>
         <section>
-          <h2>Create Profile</h2>
-          <p>When creating your profile, remember to give the 'bio' a personal touch. Remember the reader; your fans and those who would hire you want to get a sense of your background and inspirations. And don't forget to proveide links to your social media, and contact information for getting hired.</p>
-          <p>Adding tags is optional, but recommended. Tags are searchable and help people find artists who use them.</p>
-          <p>Putting a SoundCloud playlist of your music is also optional, but it's a great way to let people dive right into getting know and hear your sound. If you don't know how to get the embed code, follow these steps:</p>
+          <h2 className='page-heading'>Create Profile</h2>
+          <p>When creating your profile, consider giving the 'bio' a personal touch. Remember the reader; your fans and those who would hire you want to get a sense of your background and inspirations. {/* And don't forget to provide links to your social media, and contact information for getting hired */}.</p>
+          {/* <p>Adding tags is optional, but recommended. Tags are searchable and help people find artists who use them.</p> */}
+          <p>Putting a SoundCloud playlist of your music is optional, but it's a great way to let people dive right into getting hear and know your sound. If you don't know how to get the embed code, you can view the <a href='https://help.soundcloud.com/hc/en-us/articles/115003568008' target='_blank' rel='noopener noreferrer' className='soundcloud-instructions-link'>instructions on SoundCloud</a>, or just follow these steps:</p>
           <ol>
             <li>On SoundCloud, click the 'Share' button below the track/playlist that you want to embed. (An overlay will appear.)</li>
             <li>Click on the "Embed" tab of the overlay, copy the HTML code in the "Code" section.</li>
-            <li>On this page, paste that HTML code into the "SoundCloud Embed" form field. (Please note, you can only have one embed on your profile at this time.)</li>
+            <li>Back to this page on IndieNexus, paste that HTML code into the "SoundCloud Embed" form field. (Please note, you can only have one embed on your profile at this time.)</li>
           </ol>
-          <small>Original instructions: <a href='https://help.soundcloud.com/hc/en-us/articles/115003568008' target='_blank' rel='noopener noreferrer'>here</a>.</small>
         </section>
         <section>
-          <form className='ArtistCreatePage' onSubmit={this.handleSubmit}>
+          <form className='create-artist-form' onSubmit={this.handleSubmit}>
             <div className='form-section'>
               <label htmlFor='artist-name'>Name</label>
               <input
@@ -67,7 +66,7 @@ export default class ArtistCreatePage extends Component {
               <input type='text' name='tags' id='tags' placeholder='' />
             </div> */}
             <div className='form-section'>
-              <label htmlFor='audioEmbed'>SoundCloud Embed (see instructions above)</label>
+              <label htmlFor='audioEmbed'>SoundCloud Embed <small>(instructions above)</small></label>
               <input type='text' name='audioEmbed' id='audioEmbed' placeholder='' />
             </div>
             <div className='button-section'>
