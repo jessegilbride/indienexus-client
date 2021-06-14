@@ -10,7 +10,7 @@ export default class HomeLanding extends Component {
   render() {
     return (
       <Fragment>
-        <section className='page-top-banner homepage-banner'>
+        <section className='page-top-banner' id='homepage-banner'>
           <h1 className=''>
             IndieNexus. 
             <br />
@@ -30,9 +30,6 @@ export default class HomeLanding extends Component {
           </div>
         </section> */}
 
-        <footer>
-          <small>&copy; IndieNexus</small>
-        </footer>
       </Fragment>
     );
   }
