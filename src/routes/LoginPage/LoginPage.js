@@ -21,7 +21,8 @@ export default class LoginPage extends Component {
     return (
       <section className='LoginPage'>
         <h2 className='page-heading'>Login</h2>
-        <p className='register-message'>Don't have an account yet? <Link to='/register' className='register-link'>Register Here</Link></p>
+        <p className='register-message'>Don't have an account yet?</p>
+        <Link to='/register' className='register-link'>Register Here</Link>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
       </section>
     )
