@@ -27,7 +27,7 @@ export default class ArtistListPage extends Component {
     return (
       <Fragment>
         <section className="page-width-container page-top-banner artist-list-banner">
-          <h2 className='page-heading'>List of All Artists</h2>
+          <h2 className='page-heading'>All Artists</h2>
         </section>
         <section className="artist-list page-width-container">
           {error ? (
