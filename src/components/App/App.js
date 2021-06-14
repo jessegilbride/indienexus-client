@@ -95,6 +95,11 @@ class App extends Component {
             <Route component={NotFoundPage} />
           </Switch>
         </main>
+        <footer className='App__footer'>
+          <div className='page-width-container'>
+            <small>&copy; IndieNexus {(new Date()).getFullYear()}</small>
+          </div>
+        </footer>
       </div>
     );
   }
